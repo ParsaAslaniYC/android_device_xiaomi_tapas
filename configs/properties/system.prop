@@ -1,11 +1,28 @@
+# Brightness Curve
+persist.sys.brightness.low.gamma=true
+
 # CNE
 persist.vendor.cne.feature=1
 
-# Charger
-ro.charger.enable_suspend=1
+# Disable MTE Async for system server
+arm64.memtag.process.system_server=off
 
 # Ftrace
 persist.debug.ftrace_events_disable=Yes
+
+# Fingerprint
+sys.fp.miui.token=0
+
+# IMS & Volte
+persist.dbg.ims_volte_enable=1
+persist.dbg.volte_avail_ovr=1
+persist.dbg.vt_avail_ovr=1
+
+# IMS Debugging
+persist.vendor.ims.disableADBLogs=1
+persist.vendor.ims.disableDebugLogs=1
+persist.vendor.ims.disableIMSLogs=1
+persist.vendor.ims.disableQXDMLogs=1
 
 # Fwk-Detect
 ro.vendor.qti.va_aosp.support=1
@@ -19,9 +36,6 @@ debug.hwui.target_cpu_time_percent=30
 
 # HWUI
 debug.hwui.skia_atrace_enabled=false
-
-# IMS
-persist.vendor.ims.no_stapa=1
 
 # IOrap
 persist.device_config.runtime_native_boot.iorap_perfetto_enable=true
@@ -44,14 +58,6 @@ ro.nfc.port=I2C
 # NTP
 persist.backup.ntpServer="0.pool.ntp.org"
 
-# Radio
-DEVICE_PROVISIONED=1
-persist.vendor.radio.atfwd.start=true
-ril.subscription.types=NV,RUIM
-rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so
-ro.telephony.default_network=33,33
-telephony.lteOnCdmaDevice=1
-
 # SdCardFS
 persist.sys.fuse.passthrough.enable=true
 
@@ -65,12 +71,62 @@ persist.vendor.sensors.enable.mag_filter=true
 persist.vendor.ssr.enable_ramdumps=1
 persist.vendor.ssr.restart_level=ALL_ENABLE
 
-# Wi-Fi Display
-persist.debug.wfd.enable=1
-persist.sys.wfd.virtual=0
-
 # WLAN
-ro.hardware.wlan.chip=wcn3950
 ro.hardware.wlan.dbs=0
 ro.hardware.wlan.mimo=0
 ro.hardware.wlan.vendor=qcom
+
+# Deep Sleep
+pm.sleep_mode=1
+vendor.post_boot.parsed=1s
+
+# SPAMMY S Log Tags
+persist.log.tag.AnalyticsService=S
+persist.log.tag.KernelCpuUidActiveTimeReader=S
+persist.log.tag.Tracer=S
+persist.log.tag.NearbySharing=S
+persist.log.tag.IntervalStats=S
+persist.log.tag.CompatibilityChangeReporter=S
+persist.log.tag.SQLiteLog=S
+persist.log.tag.wificond=S
+persist.log.tag.b/223498680=S
+persist.log.tag.TrafficStats=S
+persist.log.tag.ContrastColorUtil=S
+persist.log.tag.OpenGLRenderer=S
+persist.log.tag.ultrasound_extn=S
+
+# SPAMMY E Log Tags
+persist.log.tag.ApexManager=E
+persist.log.tag.ApexManagerTiming=E
+persist.log.tag.CoreBackPreview=E
+persist.log.tag.CompatConfig=E
+persist.log.tag.GameManagerService=E
+persist.log.tag.HotseatPredictionController=E
+persist.log.tag.JobScheduler=E
+persist.log.tag.LineageSystemServer=E
+persist.log.tag.MiStcImpl=E
+persist.log.tag.NearbyConnections=E
+persist.log.tag.PackageManager=E
+persist.log.tag.PackageParsing=E
+persist.log.tag.PackageSettings=E
+persist.log.tag.RecyclerView=E
+persist.log.tag.SDM=E
+persist.log.tag.SDM-histogram=E
+persist.log.tag.ShellRecents=E
+persist.log.tag.SRE=E
+persist.log.tag.StorageManagerService=E
+persist.log.tag.SystemConfig=E
+persist.log.tag.SystemServerTiming=E
+persist.log.tag.SystemServerTimingAsync=E
+persist.log.tag.SystemServiceManager=E
+persist.log.tag.Telecom=E
+persist.log.tag.UserManagerService=E
+persist.log.tag.UserSystemPackageInstaller=E
+persist.log.tag.WifiHAL=E
+persist.log.tag.WindowManager=E
+persist.log.tag.WindowManagerShell=E
+persist.log.tag.android.vending=E
+
+# LMKD
+ro.lmk.kill_heaviest_task=true
+ro.lmk.kill_timeout_ms=15
