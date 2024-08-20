@@ -14,6 +14,14 @@ $(call inherit-product, device/xiaomi/tapas/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/droidx/config/common_full_phone.mk)
 
+# Inherit droidx ui variables
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_INCLUDE_LIVE_WALLPAPERS := true
+TARGET_USES_LAWNCHAIR := true
+DROIDX_BUILD_TYPE := OFFICIAL
+DROIDX_GAPPS := false
+
 PRODUCT_NAME := droidx_tapas
 PRODUCT_DEVICE := tapas
 PRODUCT_MANUFACTURER := Xiaomi
